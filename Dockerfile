@@ -2,8 +2,6 @@ FROM openshift/base-centos7
 
 # This image provides a S2I builder image for Angular applications running inside an NGINX web container.
 
-MAINTAINER Marcel Maas <maas.marcel@gmail.com>
-
 LABEL summary="Platform for building and running Angular applications on NGINX" \
       io.k8s.description="OpenShift S2I builder image for Angular apps using Angular CLI and NGINX 1.12.1." \
       io.k8s.display-name="Angular S2I NGINX" \
