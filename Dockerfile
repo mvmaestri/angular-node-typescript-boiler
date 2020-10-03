@@ -66,7 +66,7 @@ RUN set -ex && \
     /usr/share/man /tmp/* /usr/local/lib/node_modules/npm/man /usr/local/lib/node_modules/npm/doc /usr/local/lib/node_modules/npm/html
 
 # Copy the S2I scripts
-COPY ./bin/ /usr/libexec/s2i
+COPY ./s2i/bin/ /usr/libexec/s2i
 
 RUN chgrp -R 1001 /usr/share/nginx \
     && chmod -R 777 /usr/share/nginx
