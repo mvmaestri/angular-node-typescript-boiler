@@ -68,8 +68,13 @@ RUN set -ex && \
 # Copy the S2I scripts
 COPY ./s2i/bin/ /usr/libexec/s2i
 
+RUN ls -ls
+COPY ./dist/browser /usr/share/nginx/html
+
+RUN cat /etc/nginx/nginx.conf
+
 RUN chgrp -R 1001 /usr/share/nginx \
-    && chmod -R 777 /usr/share/nginx
+    && chmod -R 777 /usr/share/nginx 
 RUN chgrp -R 1001 /var/log/nginx \
     && chmod -R 777 /var/log/nginx
 RUN chgrp -R 1001 /var/lib/nginx \
