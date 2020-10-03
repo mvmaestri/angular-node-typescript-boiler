@@ -89,4 +89,4 @@ EXPOSE 8080
 # Modify the usage script in your application dir to inform the user how to run
 # this image.
 
-CMD ["/usr/libexec/s2i/usage"]
+CMD ["/usr/libexec/s2i/run"]
